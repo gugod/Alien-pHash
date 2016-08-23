@@ -23,7 +23,7 @@ my $builder = Alien::Base::ModuleBuild->new(
     pattern  => qr/pHash-([\d.]+)\.tar\.gz$/,
   },
   alien_build_commands => [
-    '%pconfigure --prefix=%s --enable-shared', 
+    '%c --prefix=%s --enable-shared',
     'make',
     'make install'
   ],
