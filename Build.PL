@@ -13,10 +13,13 @@ my $builder = My::ModuleBuild->new(
     license => 'mit',
     configure_requires => {
         'Alien::Base' => 0,
+        'Alien::libsndfile' => 0,
+        'Alien::CImg' => 0,
     },
     requires => {
         'perl' => '5.8.1',
         'Alien::Base' => 0,
+        'Alien::libsndfile' => 0,
         'Alien::CImg' => 0.01,
     },
     alien_name => 'pHash',
@@ -30,7 +33,7 @@ my $builder = My::ModuleBuild->new(
         # pattern => qr/pHash-([\d.]+)\.tar\.gz$/,
     },
     alien_build_commands => [
-        '%c --prefix=%s --disable-pthread --disable-video-hash --disable-audio-hash',
+        '%c --prefix=%s --disable-pthread --disable-video-hash',
         'make',
         'make install'
     ],
