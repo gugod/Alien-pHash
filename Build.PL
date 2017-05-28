@@ -12,7 +12,8 @@ my $builder = My::ModuleBuild->new(
     module_name => 'Alien::pHash',
     license => 'mit',
     configure_requires => {
-        'Alien::Base' => 0,
+        'Module::Build' => 0.42,
+        'Alien::Base' => 0.042,
         'Alien::libsndfile' => 0,
         'Alien::CImg' => 0,
     },
