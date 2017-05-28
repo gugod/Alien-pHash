@@ -34,8 +34,7 @@ my $builder = My::ModuleBuild->new(
         'make',
         'make install'
     ],
-    alian_env => {
-        XYZ => "blah",
+    alien_extra_site_config => {
         CFLAGS => Alien::CImg->cflags,
         CXXFLAGS => Alien::CImg->cflags,
     }
